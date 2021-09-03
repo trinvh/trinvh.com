@@ -1,18 +1,34 @@
-import Link from './Link'
-import siteMetadata from '@/data/siteMetadata'
-import SocialIcon from '@/components/social-icons'
+import Link from "./Link";
+import siteMetadata from "@/data/siteMetadata";
+import SocialIcon from "@/components/social-icons";
 
 export default function Footer() {
   return (
     <footer>
       <div className="flex flex-col items-center mt-16">
         <div className="flex mb-3 space-x-4">
-          {siteMetadata.email && <SocialIcon kind="mail" href={`mailto:${siteMetadata.email}`} size={6} />}
-          {siteMetadata.github && <SocialIcon kind="github" href={siteMetadata.github} size={6} />}
-          {siteMetadata.facebook && <SocialIcon kind="facebook" href={siteMetadata.facebook} size={6} />}
-          {siteMetadata.youtube && <SocialIcon kind="youtube" href={siteMetadata.youtube} size={6} />}
-          {siteMetadata.linkedin && <SocialIcon kind="linkedin" href={siteMetadata.linkedin} size={6} />}
-          {siteMetadata.twitter && <SocialIcon kind="twitter" href={siteMetadata.twitter} size={6} />}
+          {siteMetadata.email && (
+            <SocialIcon
+              kind="mail"
+              href={`mailto:${siteMetadata.email}`}
+              size={6}
+            />
+          )}
+          {siteMetadata.github && (
+            <SocialIcon kind="github" href={siteMetadata.github} size={6} />
+          )}
+          {siteMetadata.facebook && (
+            <SocialIcon kind="facebook" href={siteMetadata.facebook} size={6} />
+          )}
+          {siteMetadata.youtube && (
+            <SocialIcon kind="youtube" href={siteMetadata.youtube} size={6} />
+          )}
+          {siteMetadata.linkedin && (
+            <SocialIcon kind="linkedin" href={siteMetadata.linkedin} size={6} />
+          )}
+          {siteMetadata.twitter && (
+            <SocialIcon kind="twitter" href={siteMetadata.twitter} size={6} />
+          )}
         </div>
         <div className="flex mb-2 space-x-2 text-sm text-gray-500 dark:text-gray-400">
           <div>{siteMetadata.author}</div>
@@ -22,9 +38,11 @@ export default function Footer() {
           <Link href="/">{siteMetadata.title}</Link>
         </div>
         <div className="mb-8 text-sm text-gray-500 dark:text-gray-400">
-          <Link href="https://thichtienhiep.com">Sponsored by ThichTienHiep</Link>
+          <Link href="https://thichtienhiep.com">
+            Sponsored by ThichTienHiep
+          </Link>
         </div>
       </div>
     </footer>
-  )
+  );
 }

@@ -1,8 +1,8 @@
-import Image from './Image'
-import Link from './Link'
+import Image from "./Image";
+import Link from "./Link";
 
 const Card = ({ title, description, imgSrc, href }) => (
-  <div className="p-4 md:w-1/2 md" style={{ maxWidth: '544px' }}>
+  <div className="p-4 md:w-1/2 md" style={{ maxWidth: "544px" }}>
     <div className="h-full overflow-hidden border-2 border-gray-200 rounded-md border-opacity-60 dark:border-gray-700">
       {href ? (
         <Link href={href} aria-label={`Link to ${title}`}>
@@ -33,7 +33,9 @@ const Card = ({ title, description, imgSrc, href }) => (
             title
           )}
         </h2>
-        <p className="mb-3 prose text-gray-500 max-w-none dark:text-gray-400">{description}</p>
+        <p className="mb-3 prose text-gray-500 max-w-none dark:text-gray-400">
+          {description}
+        </p>
         {href && (
           <Link
             href={href}
@@ -46,6 +48,6 @@ const Card = ({ title, description, imgSrc, href }) => (
       </div>
     </div>
   </div>
-)
+);
 
-export default Card
+export default Card;
